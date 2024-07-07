@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -28,11 +29,145 @@
           </reporter-output>
         </test-method> <!-- test2 -->
         <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@38d8f54a]" started-at="2024-07-07T12:32:26 IST" name="teardown" finished-at="2024-07-07T12:32:26 IST" duration-ms="247" status="PASS">
+=======
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-02T14:26:11 IST" name="Suite" finished-at="2024-07-02T14:26:28 IST" duration-ms="17050">
+    <groups>
+    </groups>
+    <test started-at="2024-07-02T14:26:11 IST" name="Test" finished-at="2024-07-02T14:26:28 IST" duration-ms="17050">
+      <class name="orangeHRM.testcases.LoginPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@619713e5]" started-at="2024-07-02T14:26:11 IST" name="setup" finished-at="2024-07-02T14:26:22 IST" duration-ms="10860" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@619713e5]" started-at="2024-07-02T14:26:11 IST" name="setup" finished-at="2024-07-02T14:26:22 IST" duration-ms="11121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test1()[pri:0, instance:orangeHRM.testcases.LoginPageTest@619713e5]" started-at="2024-07-02T14:26:22 IST" name="test1" finished-at="2024-07-02T14:26:22 IST" duration-ms="80" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=126.0.6478.127)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [750e5a7e15ebd9e1252e5e592de13763, sendKeysToElement {id=f.563F9EA1FDC473198B755C41D65BB40A.d.015958958018728DFF4A349105730A77.e.2, value=[Ljava.lang.CharSequence;@7342cc4d}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\in8DebAd\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50181}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50181/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (750e5a7e15ebd9e1252e5e592de13763)] -> name: q]
+Session ID: 750e5a7e15ebd9e1252e5e592de13763]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=126.0.6478.127)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [750e5a7e15ebd9e1252e5e592de13763, sendKeysToElement {id=f.563F9EA1FDC473198B755C41D65BB40A.d.015958958018728DFF4A349105730A77.e.2, value=[Ljava.lang.CharSequence;@7342cc4d}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\in8DebAd\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50181}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50181/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (750e5a7e15ebd9e1252e5e592de13763)] -> name: q]
+Session ID: 750e5a7e15ebd9e1252e5e592de13763
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at orangeHRM.testcases.LoginPageTest.test1(LoginPageTest.java:20)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@619713e5]" started-at="2024-07-02T14:26:22 IST" name="teardown" finished-at="2024-07-02T14:26:22 IST" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="test2()[pri:0, instance:orangeHRM.testcases.LoginPageTest@619713e5]" started-at="2024-07-02T14:26:22 IST" name="test2" finished-at="2024-07-02T14:26:22 IST" duration-ms="65" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=126.0.6478.127)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4375e4cb052906aea8d70b4a8466fa68, sendKeysToElement {id=f.01D2B9374EFCCA49DA27DCDA1F52DFDA.d.42B360F2F17C0A0C000D275B94D3407E.e.20, value=[Ljava.lang.CharSequence;@8644121}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\in8DebAd\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50170}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50170/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4375e4cb052906aea8d70b4a8466fa68)] -> name: q]
+Session ID: 4375e4cb052906aea8d70b4a8466fa68]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=126.0.6478.127)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4375e4cb052906aea8d70b4a8466fa68, sendKeysToElement {id=f.01D2B9374EFCCA49DA27DCDA1F52DFDA.d.42B360F2F17C0A0C000D275B94D3407E.e.20, value=[Ljava.lang.CharSequence;@8644121}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\in8DebAd\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50170}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50170/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4375e4cb052906aea8d70b4a8466fa68)] -> name: q]
+Session ID: 4375e4cb052906aea8d70b4a8466fa68
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at orangeHRM.testcases.LoginPageTest.test2(LoginPageTest.java:25)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@619713e5]" started-at="2024-07-02T14:26:22 IST" name="teardown" finished-at="2024-07-02T14:26:22 IST" duration-ms="156" status="PASS">
+>>>>>>> 6822593227d0646e828946ebf3f7e9528c3cfb3a
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- orangeHRM.testcases.LoginPageTest -->
       <class name="orangeHRM.testcases.HomePageTest">
+<<<<<<< HEAD
         <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.HomePageTest@13c9d689]" started-at="2024-07-07T12:32:26 IST" name="setup" finished-at="2024-07-07T12:32:30 IST" duration-ms="4070" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -42,6 +177,17 @@
           </reporter-output>
         </test-method> <!-- test3 -->
         <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.HomePageTest@13c9d689]" started-at="2024-07-07T12:32:31 IST" name="teardown" finished-at="2024-07-07T12:32:31 IST" duration-ms="207" status="PASS">
+=======
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.HomePageTest@5fdcaa40]" started-at="2024-07-02T14:26:22 IST" name="setup" finished-at="2024-07-02T14:26:28 IST" duration-ms="5630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test3()[pri:0, instance:orangeHRM.testcases.HomePageTest@5fdcaa40]" started-at="2024-07-02T14:26:28 IST" name="test3" finished-at="2024-07-02T14:26:28 IST" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.HomePageTest@5fdcaa40]" started-at="2024-07-02T14:26:28 IST" name="teardown" finished-at="2024-07-02T14:26:28 IST" duration-ms="150" status="PASS">
+>>>>>>> 6822593227d0646e828946ebf3f7e9528c3cfb3a
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

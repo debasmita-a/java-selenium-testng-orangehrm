@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import orangeHRM.basetest.BaseTest;
-import orangeHRM.driver.DriverFactory;
+import orangeHRM.driver.DriverManager;
 
 public final class LoginPageTest extends BaseTest{
 	
@@ -16,13 +16,13 @@ public final class LoginPageTest extends BaseTest{
 
 	@Test
 	public void test1() {	
-		DriverFactory.initDriver(); 
-		DriverFactory.getDriver().findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
+		//DriverFactory.initDriver(); 
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
 	}
 	
 	@Test
 	public void test2() {	
-		DriverFactory.getDriver().findElement(By.name("q")).sendKeys("Selenium",Keys.ENTER);
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("Selenium",Keys.ENTER);
 	}
 	
 

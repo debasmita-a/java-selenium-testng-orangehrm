@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import orangeHRM.basetest.BaseTest;
 import orangeHRM.driver.DriverFactory;
+import orangeHRM.driver.DriverManager;
 
 public final class HomePageTest extends BaseTest{
 
@@ -15,7 +16,7 @@ public final class HomePageTest extends BaseTest{
 	
 	@Test
 	public void test3() {	
-		DriverFactory.initDriver(); 
-		DriverFactory.getDriver().findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
+		//DriverFactory.initDriver(); 
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("Automation Testing",Keys.ENTER);
 	}
 }

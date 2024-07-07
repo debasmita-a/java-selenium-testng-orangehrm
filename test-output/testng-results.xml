@@ -1,25 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-01T15:36:52 IST" name="Default suite" finished-at="2024-07-01T15:37:02 IST" duration-ms="10023">
+  <suite started-at="2024-07-07T12:32:13 IST" name="Suite" finished-at="2024-07-07T12:32:31 IST" duration-ms="17886">
     <groups>
     </groups>
-    <test started-at="2024-07-01T15:36:52 IST" name="Default test" finished-at="2024-07-01T15:37:02 IST" duration-ms="10023">
+    <test started-at="2024-07-07T12:32:13 IST" name="Test" finished-at="2024-07-07T12:32:31 IST" duration-ms="17886">
       <class name="orangeHRM.testcases.LoginPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@7722c3c3]" started-at="2024-07-01T15:36:52 IST" name="setup" finished-at="2024-07-01T15:37:01 IST" duration-ms="9362" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@38d8f54a]" started-at="2024-07-07T12:32:13 IST" name="setup" finished-at="2024-07-07T12:32:19 IST" duration-ms="6131" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test1()[pri:0, instance:orangeHRM.testcases.LoginPageTest@7722c3c3]" started-at="2024-07-01T15:37:01 IST" name="test1" finished-at="2024-07-01T15:37:01 IST" duration-ms="452" status="PASS">
+        <test-method signature="test1()[pri:0, instance:orangeHRM.testcases.LoginPageTest@38d8f54a]" started-at="2024-07-07T12:32:19 IST" name="test1" finished-at="2024-07-07T12:32:21 IST" duration-ms="1912" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@7722c3c3]" started-at="2024-07-01T15:37:01 IST" name="teardown" finished-at="2024-07-01T15:37:02 IST" duration-ms="179" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@38d8f54a]" started-at="2024-07-07T12:32:21 IST" name="teardown" finished-at="2024-07-07T12:32:21 IST" duration-ms="261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@38d8f54a]" started-at="2024-07-07T12:32:21 IST" name="setup" finished-at="2024-07-07T12:32:26 IST" duration-ms="4287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test2()[pri:0, instance:orangeHRM.testcases.LoginPageTest@38d8f54a]" started-at="2024-07-07T12:32:26 IST" name="test2" finished-at="2024-07-07T12:32:26 IST" duration-ms="309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@38d8f54a]" started-at="2024-07-07T12:32:26 IST" name="teardown" finished-at="2024-07-07T12:32:26 IST" duration-ms="247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- orangeHRM.testcases.LoginPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="orangeHRM.testcases.HomePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.HomePageTest@13c9d689]" started-at="2024-07-07T12:32:26 IST" name="setup" finished-at="2024-07-07T12:32:30 IST" duration-ms="4070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test3()[pri:0, instance:orangeHRM.testcases.HomePageTest@13c9d689]" started-at="2024-07-07T12:32:30 IST" name="test3" finished-at="2024-07-07T12:32:31 IST" duration-ms="355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.HomePageTest@13c9d689]" started-at="2024-07-07T12:32:31 IST" name="teardown" finished-at="2024-07-07T12:32:31 IST" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- orangeHRM.testcases.HomePageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

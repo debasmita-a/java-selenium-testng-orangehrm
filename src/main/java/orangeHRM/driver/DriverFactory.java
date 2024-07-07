@@ -23,6 +23,7 @@ public class DriverFactory {
 	}
 
 	public static void initDriver() {
+		System.out.println(Thread.currentThread().getId() + " : " + DriverFactory.driver);
 		if(Objects.isNull(driver)) { // if(driver == null)
 			System.out.println("Launching chrome browser..");
 			driver = new ChromeDriver();

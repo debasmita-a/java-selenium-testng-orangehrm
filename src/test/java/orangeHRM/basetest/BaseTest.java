@@ -12,12 +12,12 @@ public class BaseTest {
 	}
 	
 	@BeforeMethod
-	public void setup() {
+	protected void setup() {
 		DriverFactory.initDriver();
 	}
 	
 	@AfterMethod
-	public void teardown() {
+	protected void teardown() {
 		DriverFactory.quitDriver();
 	}
 	

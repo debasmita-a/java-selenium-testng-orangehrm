@@ -5,14 +5,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public final class DriverManager {
 
-	private static ThreadLocal<WebDriver> tlDriver = ThreadLocal.withInitial(()->{
-		System.out.println("With initials method. Functional interface - Supplier ");
-		return new ChromeDriver(); //default value is new ChromeDriver()
-	});
+	private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 
 	private DriverManager() {
 		
 	}
+	
 	public static WebDriver getDriver() {
 		return tlDriver.get();
 	}

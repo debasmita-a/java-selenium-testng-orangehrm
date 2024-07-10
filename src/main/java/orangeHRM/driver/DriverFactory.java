@@ -5,20 +5,22 @@ import java.util.Objects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import orangeHRM.utilities.ReadPropertyFile;
+
 public final class DriverFactory {
 
 	private DriverFactory() {
 
 	}
 
-	public static void initDriver() {
+	public static void initDriver() throws Exception {
 		
 		if(Objects.isNull(DriverManager.getDriver())) { 
 
 			System.out.println("Launching chrome browser..");
 			WebDriver driver = new ChromeDriver();
 			DriverManager.setDriver(driver);
-			DriverManager.getDriver().get("https://google.com");
+			DriverManager.getDriver().get(ReadPropertyFile.get("url"));
 		}
 		
 	}

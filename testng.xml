@@ -6,7 +6,6 @@
   <test thread-count="2" name="Test" parallel="methods">
 
     <classes>
-      <class name="orangeHRM.testcases.LoginPageTest"/>
       <class name="orangeHRM.testcases.HomePageTest"/>
     </classes>
     

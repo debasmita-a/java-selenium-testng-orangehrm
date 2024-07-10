@@ -10,14 +10,6 @@
           <include name="setup"/>
         </methods>
       </class> <!-- orangeHRM.testcases.HomePageTest -->
-      <class name="orangeHRM.testcases.LoginPageTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="test2"/>
-          <include name="setup"/>
-          <include name="test1"/>
-        </methods>
-      </class> <!-- orangeHRM.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

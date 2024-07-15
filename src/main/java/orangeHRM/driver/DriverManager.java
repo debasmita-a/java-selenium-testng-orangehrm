@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public final class DriverManager {
 
-	private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
+	private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
 	private DriverManager() {
 		

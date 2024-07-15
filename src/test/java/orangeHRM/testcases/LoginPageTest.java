@@ -1,29 +1,27 @@
 package orangeHRM.testcases;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import orangeHRM.basetest.BaseTest;
-import orangeHRM.driver.DriverManager;
 
 public final class LoginPageTest extends BaseTest{
 	
 	private LoginPageTest() {
 		
 	}
-
-
+	
 	@Test
-	public void test1() {	
-		//DriverFactory.initDriver(); 
-		DriverManager.getDriver().findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
+	public void getPageTitleTest() {
+		Assert.assertTrue(loginPage.getPageTitle().contains("OrangeHRM"));
+		
 	}
 	
 	@Test
-	public void test2() {	
-		DriverManager.getDriver().findElement(By.name("q")).sendKeys("Selenium",Keys.ENTER);
+	public void doLoginTest() throws InterruptedException {
+		homePage = loginPage.enterUserName("Admin").enterPassword("admin123")
+		         .doLogin();
+		Assert.assertEquals(homePage.getDashboardText(), "Dashboard");
 	}
-	
 
 }

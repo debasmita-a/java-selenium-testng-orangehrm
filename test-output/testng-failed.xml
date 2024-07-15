@@ -6,7 +6,7 @@
       <class name="orangeHRM.testcases.HomePageTest">
         <methods>
           <include name="teardown"/>
-          <include name="test3"/>
+          <include name="clickLogoutTest"/>
           <include name="setup"/>
         </methods>
       </class> <!-- orangeHRM.testcases.HomePageTest -->

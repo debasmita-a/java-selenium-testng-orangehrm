@@ -2,6 +2,8 @@ package orangeHRM.pages;
 
 import org.openqa.selenium.By;
 
+import orangeHRM.enums.WaitStrategy;
+
 public final class HomePage extends BasePage{
 
 	private static final By dashboardText = By.xpath("//h6[text()='Dashboard']");
@@ -9,16 +11,16 @@ public final class HomePage extends BasePage{
 	private static final By linkLogout = By.linkText("Logout");
 	
 	public String getDashboardText() {
-		return getTextWithWait(dashboardText, 5);
+		return getText(dashboardText);
 	}
 	
 	public String getPageTitle() {
-		return getTitle();
+		return getPageTitle();
 	}
 	
 	public LoginPage clickLogout() {
-		clickWithWait(userprofile, 5);
-		clickWithWait(linkLogout, 5);
+		click(userprofile, WaitStrategy.CLICKABLE);
+		click(linkLogout, WaitStrategy.CLICKABLE);
 		return new LoginPage();
 	}
 }

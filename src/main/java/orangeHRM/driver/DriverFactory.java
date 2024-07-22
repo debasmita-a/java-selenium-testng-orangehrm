@@ -5,6 +5,7 @@ import java.util.Objects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import orangeHRM.enums.ConfigProperties;
 import orangeHRM.utilities.ReadPropertyFile;
 
 public final class DriverFactory {
@@ -20,7 +21,7 @@ public final class DriverFactory {
 			System.out.println("Launching chrome browser..");
 			WebDriver driver = new ChromeDriver();
 			DriverManager.setDriver(driver);
-			DriverManager.getDriver().get(ReadPropertyFile.get("url"));
+			DriverManager.getDriver().get(ReadPropertyFile.get(ConfigProperties.URL));
 		}
 		
 	}

@@ -7,6 +7,7 @@
 
     <classes>
       <class name="orangeHRM.testcases.HomePageTest"/>
+      <class name="orangeHRM.testcases.LoginPageTest"/>
     </classes>
     
   </test> <!-- Test -->

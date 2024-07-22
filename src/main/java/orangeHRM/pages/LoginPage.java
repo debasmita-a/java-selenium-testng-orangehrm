@@ -2,6 +2,8 @@ package orangeHRM.pages;
 
 import org.openqa.selenium.By;
 
+import orangeHRM.enums.WaitStrategy;
+
 public final class LoginPage extends BasePage{
 
 	private static final By inputUsername = By.xpath("//input[@name='username']");
@@ -11,22 +13,22 @@ public final class LoginPage extends BasePage{
 	private static final By footerText = By.className("orangehrm-copyright-wrapper");
 
 	public LoginPage enterUserName(String username){
-		sendKeysWithWait(inputUsername, username, 5);
+		sendKeys(inputUsername, username, WaitStrategy.PRESENCE);
 		return this;
 	}
 
 	public LoginPage enterPassword(String password) {
-		sendKeysWithWait(inputPassword, password, 5);
+		sendKeys(inputPassword, password, WaitStrategy.PRESENCE);
 		return this;
 	}
 
 	public HomePage doLogin() {
-		clickWithWait(btnLogin, 5);
+		click(btnLogin, WaitStrategy.CLICKABLE);
 		return new HomePage();
 	}
 
 	public String getPageTitle() {
-		return getTitle();
+		return getPageTitle();
 	}
 
 	public String getPageFooterText() {
@@ -34,7 +36,7 @@ public final class LoginPage extends BasePage{
 	}
 
 	public boolean isForgotPwdLinkAvailable() {
-		return isElementDisplayedWithWait(linkForgotPwd, 5);
+		return isElementDisplayed(linkForgotPwd);
 	}
 
 }

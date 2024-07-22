@@ -1,25 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-15T17:32:39 IST" name="Default suite" finished-at="2024-07-15T17:32:45 IST" duration-ms="6776">
+  <suite started-at="2024-07-22T14:10:24 IST" name="Default suite" finished-at="2024-07-22T14:10:24 IST" duration-ms="714">
     <groups>
     </groups>
-    <test started-at="2024-07-15T17:32:39 IST" name="Default test" finished-at="2024-07-15T17:32:45 IST" duration-ms="6776">
-      <class name="orangeHRM.testcases.LoginPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@243c4f91]" started-at="2024-07-15T17:32:39 IST" name="setup" finished-at="2024-07-15T17:32:43 IST" duration-ms="4301" status="PASS">
+    <test started-at="2024-07-22T14:10:24 IST" name="Default test" finished-at="2024-07-22T14:10:24 IST" duration-ms="714">
+      <class name="orangeHRM.dataproviders.DataProviderWithExcel">
+        <test-method signature="test01(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:orangeHRM.dataproviders.DataProviderWithExcel@333291e3]" started-at="2024-07-22T14:10:24 IST" name="test01" data-provider="getData" finished-at="2024-07-22T14:10:24 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser01]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[testpass02]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[suman]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[adhikari]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="doLoginTest()[pri:0, instance:orangeHRM.testcases.LoginPageTest@243c4f91]" started-at="2024-07-15T17:32:43 IST" name="doLoginTest" finished-at="2024-07-15T17:32:45 IST" duration-ms="2446" status="PASS">
+        </test-method> <!-- test01 -->
+        <test-method signature="test01(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:orangeHRM.dataproviders.DataProviderWithExcel@333291e3]" started-at="2024-07-22T14:10:24 IST" name="test01" data-provider="getData" finished-at="2024-07-22T14:10:24 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser02]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[testpass03]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[suman]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[smith]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@243c4f91]" started-at="2024-07-15T17:32:45 IST" name="teardown" finished-at="2024-07-15T17:32:45 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- test01 -->
+        <test-method signature="test01(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:orangeHRM.dataproviders.DataProviderWithExcel@333291e3]" started-at="2024-07-22T14:10:24 IST" name="test01" data-provider="getData" finished-at="2024-07-22T14:10:24 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser03]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pass04]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[debasmita]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[adhikari]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- orangeHRM.testcases.LoginPageTest -->
+        </test-method> <!-- test01 -->
+        <test-method signature="test01(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:orangeHRM.dataproviders.DataProviderWithExcel@333291e3]" started-at="2024-07-22T14:10:24 IST" name="test01" data-provider="getData" finished-at="2024-07-22T14:10:24 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser05]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pass05]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[pankaj]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[singh]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01 -->
+      </class> <!-- orangeHRM.dataproviders.DataProviderWithExcel -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

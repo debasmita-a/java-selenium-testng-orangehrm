@@ -13,6 +13,7 @@ public final class FrameworkConstants {
 
 	private static final String CHROMEDRIVERPATH = "";
 	private static final String CONFIGFILE_PATH = System.getProperty("user.dir") + "./src/test/resources/config/configproperties.properties";
+	private static final int EXPLICITWAIT = 10;
 
 	public static String getChromeDriverPath() {
 		return CHROMEDRIVERPATH;
@@ -20,5 +21,9 @@ public final class FrameworkConstants {
 		
 	public static String getConfigfilePath() {
 		return CONFIGFILE_PATH;
+	}
+
+	public static int getExplicitwait() {
+		return EXPLICITWAIT;
 	}
 }

@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="orangeHRM.testcases.HomePageTest">
+      <class name="orangeHRM.dataproviders.DataProviderWithExcel">
         <methods>
-          <include name="teardown"/>
-          <include name="clickLogoutTest"/>
-          <include name="setup"/>
+          <include name="test01"/>
         </methods>
-      </class> <!-- orangeHRM.testcases.HomePageTest -->
+      </class> <!-- orangeHRM.dataproviders.DataProviderWithExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

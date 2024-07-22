@@ -8,6 +8,7 @@ import java.util.Objects;
 import java.util.Properties;
 
 import orangeHRM.constants.FrameworkConstants;
+import orangeHRM.enums.ConfigProperties;
 
 public final class ReadPropertyFile {
 
@@ -34,11 +35,11 @@ public final class ReadPropertyFile {
 		}
 	}
 	
-	public static String get(String key) throws Exception{
-		if(Objects.isNull(key) || Objects.isNull(property.get(key))) {
+	public static String get(ConfigProperties key) throws Exception{
+		if(Objects.isNull(key) || Objects.isNull(property.get(key.name().toLowerCase()))) {
 			throw new Exception("Property name " + key + " not found. Please check config.properties file");
 		}
-		return CONFIG_MAP.get(key);
+		return CONFIG_MAP.get(key.name().toLowerCase());
 	}
 
     //Hashtable - little slow, but threadsafe

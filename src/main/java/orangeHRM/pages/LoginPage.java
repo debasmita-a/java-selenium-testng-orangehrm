@@ -27,7 +27,7 @@ public final class LoginPage extends BasePage{
 		return new HomePage();
 	}
 
-	public String getPageTitle() {
+	public String getTitle() {
 		return getPageTitle();
 	}
 

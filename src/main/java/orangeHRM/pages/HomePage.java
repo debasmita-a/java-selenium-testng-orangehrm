@@ -19,8 +19,8 @@ public final class HomePage extends BasePage{
 	}
 	
 	public LoginPage clickLogout() {
-		click(userprofile, WaitStrategy.CLICKABLE);
-		click(linkLogout, WaitStrategy.CLICKABLE);
+		click(userprofile, WaitStrategy.CLICKABLE, "Click user profile.");
+		click(linkLogout, WaitStrategy.CLICKABLE, "Click Logout link.");
 		return new LoginPage();
 	}
 }

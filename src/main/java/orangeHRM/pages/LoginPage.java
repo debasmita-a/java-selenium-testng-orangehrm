@@ -3,6 +3,8 @@ package orangeHRM.pages;
 import org.openqa.selenium.By;
 
 import orangeHRM.enums.WaitStrategy;
+import orangeHRM.reports.ExtentLogger;
+import orangeHRM.reports.ExtentManager;
 
 public final class LoginPage extends BasePage{
 
@@ -13,21 +15,23 @@ public final class LoginPage extends BasePage{
 	private static final By footerText = By.className("orangehrm-copyright-wrapper");
 
 	public LoginPage enterUserName(String username){
-		sendKeys(inputUsername, username, WaitStrategy.PRESENCE);
+		sendKeys(inputUsername, username, WaitStrategy.PRESENCE, "User name entered.");
 		return this;
 	}
 
 	public LoginPage enterPassword(String password) {
-		sendKeys(inputPassword, password, WaitStrategy.PRESENCE);
+		sendKeys(inputPassword, password, WaitStrategy.PRESENCE, "Password entered.");
 		return this;
 	}
 
 	public HomePage doLogin() {
-		click(btnLogin, WaitStrategy.CLICKABLE);
+		ExtentLogger.pass("Do Login.");
+		click(btnLogin, WaitStrategy.CLICKABLE, "Login btn clicked.");
 		return new HomePage();
 	}
 
 	public String getTitle() {
+		ExtentLogger.pass("Get page title.");
 		return getPageTitle();
 	}
 

@@ -24,6 +24,7 @@ public class BaseTest {
 	
 	@AfterMethod
 	protected void teardown() {
+	
 		//DriverFactory.quitDriver();
 	}
 	

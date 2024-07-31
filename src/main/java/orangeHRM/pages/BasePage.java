@@ -9,25 +9,27 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import orangeHRM.constants.FrameworkConstants;
 import orangeHRM.driver.DriverManager;
 import orangeHRM.enums.WaitStrategy;
+import orangeHRM.reports.ExtentLogger;
 
 public class BasePage {
 
-	protected void click(By by, WaitStrategy waitStrategy) {
+	protected void click(By by, WaitStrategy waitStrategy, String mesg) {
 		if (waitStrategy == WaitStrategy.CLICKABLE) {
 			explicitlyWaitElementClick(by);
 		} else if (waitStrategy == WaitStrategy.PRESENCE) {
-			explicitlyWaitIfElementPresent(by);
+			explicitlyWaitIfElementPresent(by);		
 		}
-
+		ExtentLogger.pass(mesg);
 		DriverManager.getDriver().findElement(by).click();
 	}
 
-	protected void sendKeys(By by, String keys, WaitStrategy waitStrategy) {
+	protected void sendKeys(By by, String keys, WaitStrategy waitStrategy, String mesg) {
 		if (waitStrategy == WaitStrategy.CLICKABLE) {
 			explicitlyWaitElementClick(by);
 		} else if (waitStrategy == WaitStrategy.PRESENCE) {
 			explicitlyWaitIfElementPresent(by);
 		}
+		ExtentLogger.pass(mesg);
 		DriverManager.getDriver().findElement(by).sendKeys(keys);
 	}
 

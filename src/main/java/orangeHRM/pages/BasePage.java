@@ -19,8 +19,12 @@ public class BasePage {
 		} else if (waitStrategy == WaitStrategy.PRESENCE) {
 			explicitlyWaitIfElementPresent(by);		
 		}
-		ExtentLogger.pass(mesg);
 		DriverManager.getDriver().findElement(by).click();
+		try {
+			ExtentLogger.pass(mesg + "is clicked successfully.", true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	protected void sendKeys(By by, String keys, WaitStrategy waitStrategy, String mesg) {
@@ -29,8 +33,12 @@ public class BasePage {
 		} else if (waitStrategy == WaitStrategy.PRESENCE) {
 			explicitlyWaitIfElementPresent(by);
 		}
-		ExtentLogger.pass(mesg);
 		DriverManager.getDriver().findElement(by).sendKeys(keys);
+		try {
+			ExtentLogger.pass(mesg + "is entered successfully.", true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	protected String getPageTitle() {

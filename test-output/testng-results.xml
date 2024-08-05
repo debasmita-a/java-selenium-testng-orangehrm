@@ -2,20 +2,36 @@
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-31T13:57:43 IST" name="Suite" finished-at="2024-07-31T13:58:03 IST" duration-ms="19846">
+  <suite started-at="2024-08-05T11:26:01 IST" name="Suite" finished-at="2024-08-05T11:26:28 IST" duration-ms="26978">
     <groups>
     </groups>
-    <test started-at="2024-07-31T13:57:43 IST" name="Test" finished-at="2024-07-31T13:58:03 IST" duration-ms="19846">
+    <test started-at="2024-08-05T11:26:01 IST" name="Test" finished-at="2024-08-05T11:26:28 IST" duration-ms="26978">
       <class name="orangeHRM.testcases.LoginPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-07-31T13:57:43 IST" name="setup" finished-at="2024-07-31T13:57:47 IST" duration-ms="4310" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-08-05T11:26:01 IST" name="setup" finished-at="2024-08-05T11:26:12 IST" duration-ms="10996" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-07-31T13:57:43 IST" name="setup" finished-at="2024-07-31T13:57:46 IST" duration-ms="2808" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-08-05T11:26:01 IST" name="setup" finished-at="2024-08-05T11:26:11 IST" duration-ms="9621" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="doLoginTest(java.lang.String,java.lang.String)[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-07-31T13:57:46 IST" name="doLoginTest" data-provider="LoginTestDataProvider" finished-at="2024-07-31T13:57:59 IST" duration-ms="13150" status="FAIL">
+        <test-method signature="doLoginTest(java.lang.String,java.lang.String)[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-08-05T11:26:11 IST" name="doLoginTest" data-provider="LoginTestDataProvider" finished-at="2024-08-05T11:26:15 IST" duration-ms="4280" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doLoginTest -->
+        <test-method signature="doLoginTest(java.lang.String,java.lang.String)[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-08-05T11:26:12 IST" name="doLoginTest" data-provider="LoginTestDataProvider" finished-at="2024-08-05T11:26:25 IST" duration-ms="12191" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,20 +50,20 @@
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\in8DebAd\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57299}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57299/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 136bbc1092f54d54eafc772e5e1bcfa9]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\in8DebAd\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50844}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50844/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 38ec34c724af89189581a4260dde725f]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h6[text()='Dashboard'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\in8DebAd\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57299}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57299/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 136bbc1092f54d54eafc772e5e1bcfa9
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\in8DebAd\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50844}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50844/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 38ec34c724af89189581a4260dde725f
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at orangeHRM.pages.BasePage.getTextWithWait(BasePage.java:61)
-at orangeHRM.pages.BasePage.getText(BasePage.java:45)
+at orangeHRM.pages.BasePage.getTextWithWait(BasePage.java:69)
+at orangeHRM.pages.BasePage.getText(BasePage.java:53)
 at orangeHRM.pages.HomePage.getDashboardText(HomePage.java:14)
 at orangeHRM.testcases.LoginPageTest.doLoginTest(LoginPageTest.java:26)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -69,39 +85,23 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLoginTest -->
-        <test-method signature="doLoginTest(java.lang.String,java.lang.String)[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-07-31T13:57:47 IST" name="doLoginTest" data-provider="LoginTestDataProvider" finished-at="2024-07-31T13:57:49 IST" duration-ms="2363" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-07-31T13:57:49 IST" name="teardown" finished-at="2024-07-31T13:57:49 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-08-05T11:26:15 IST" name="teardown" finished-at="2024-08-05T11:26:15 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-07-31T13:57:59 IST" name="teardown" finished-at="2024-07-31T13:57:59 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-08-05T11:26:25 IST" name="teardown" finished-at="2024-08-05T11:26:25 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-07-31T13:57:59 IST" name="setup" finished-at="2024-07-31T13:58:03 IST" duration-ms="3842" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-08-05T11:26:25 IST" name="setup" finished-at="2024-08-05T11:26:27 IST" duration-ms="2271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getPageTitleTest()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-07-31T13:58:03 IST" name="getPageTitleTest" finished-at="2024-07-31T13:58:03 IST" duration-ms="6" status="PASS">
+        <test-method signature="getPageTitleTest()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-08-05T11:26:27 IST" name="getPageTitleTest" finished-at="2024-08-05T11:26:28 IST" duration-ms="1372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPageTitleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-07-31T13:58:03 IST" name="teardown" finished-at="2024-07-31T13:58:03 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:orangeHRM.testcases.LoginPageTest@71809907]" started-at="2024-08-05T11:26:28 IST" name="teardown" finished-at="2024-08-05T11:26:28 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

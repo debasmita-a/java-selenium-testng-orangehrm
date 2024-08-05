@@ -25,13 +25,13 @@ public final class LoginPage extends BasePage{
 	}
 
 	public HomePage doLogin() {
-		ExtentLogger.pass("Do Login.");
+		//ExtentLogger.pass("Do Login.");
 		click(btnLogin, WaitStrategy.CLICKABLE, "Login btn clicked.");
 		return new HomePage();
 	}
 
 	public String getTitle() {
-		ExtentLogger.pass("Get page title.");
+		//ExtentLogger.pass("Get page title.");
 		return getPageTitle();
 	}
 

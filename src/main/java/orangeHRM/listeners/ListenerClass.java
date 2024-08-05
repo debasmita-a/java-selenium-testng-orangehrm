@@ -12,7 +12,11 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onStart(ISuite suite) {
-		ExtentReportUtil.initReports();
+		try {
+			ExtentReportUtil.initReports();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -33,8 +37,11 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		ExtentLogger.fail(result.getMethod().getMethodName() + " is failed.");
-		//attach screenshot
+		try {
+			ExtentLogger.fail(result.getMethod().getMethodName() + " is failed.", true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

@@ -1,12 +1,13 @@
 package orangeHRM.testcases;
 
+import java.util.Map;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import orangeHRM.basetest.BaseTest;
-import orangeHRM.reports.ExtentManager;
-import orangeHRM.reports.ExtentReportUtil;
+import orangeHRM.utilities.DataProviderUtil;
 
 public final class LoginPageTest extends BaseTest{
 	
@@ -18,20 +19,12 @@ public final class LoginPageTest extends BaseTest{
 		Assert.assertTrue(loginPage.getTitle().contains("OrangeHRM"));		
 	}
 	
-	@Test(dataProvider="LoginTestDataProvider")
-	public void doLoginTest(String username, String pass){
+	@Test(dataProvider="getData", dataProviderClass=DataProviderUtil.class)
+	public void doLoginTest(Map<String, String> data){
 		//ExtentReportUtil.createTest("Do Login Test");
-		homePage = loginPage.enterUserName(username).enterPassword(pass)
+		homePage = loginPage.enterUserName(data.get("username")).enterPassword(data.get("password"))
 		         .doLogin();
 		Assert.assertEquals(homePage.getDashboardText(), "Dashboard");
-	}
-	
-	@DataProvider(name="LoginTestDataProvider", parallel=true)
-	public Object[][] getData(){
-		return new Object[][] {
-			{"Admin", "admin123"},
-			{"Admin123", "admin"}			
-		};
 	}
 
 }

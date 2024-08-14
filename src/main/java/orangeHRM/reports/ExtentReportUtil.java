@@ -13,14 +13,17 @@ import orangeHRM.constants.FrameworkConstants;
 
 public final class ExtentReportUtil {
 
-	private ExtentReportUtil() {}
+	private ExtentReportUtil() {
+	}
 
 	private static ExtentReports extent;
 
 	public static void initReports() throws Exception {
 		if (Objects.isNull(extent)) {
 			extent = new ExtentReports();
-			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getExtentreportpath()); // html file will be generated
+			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getExtentreportpath()); // html file
+																											// will be
+																											// generated
 			spark.config().setTheme(Theme.DARK);
 			spark.config().setDocumentTitle("OrangeHRM Automation Report");
 			spark.config().setReportName("Regression Report");
@@ -32,9 +35,7 @@ public final class ExtentReportUtil {
 		if (Objects.nonNull(extent)) {
 			extent.flush();
 		}
-		
 		ExtentManager.unloadExtentTest();
-		
 		try {
 			Desktop.getDesktop().browse(new File("index.html").toURI());
 		} catch (IOException e) {

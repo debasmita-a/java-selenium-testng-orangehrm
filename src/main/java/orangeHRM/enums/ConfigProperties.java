@@ -7,5 +7,6 @@ public enum ConfigProperties {
 	PASSEDSTEPSSCREENSHOT, //passedstepsscreenshot
 	FAILEDSTEPSSCREENSHOT, //failedstepsscreenshot
 	SKIPPEDSTEPSSCREENSHOT, //skippedstepsscreenshot
+	RETRYFAILEDTESTS,
 	BROWSER
 }

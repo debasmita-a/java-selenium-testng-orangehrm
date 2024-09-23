@@ -10,6 +10,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import orangeHRM.constants.FrameworkConstants;
+import orangeHRM.enums.CategoryType;
 
 public final class ExtentReportUtil {
 
@@ -46,5 +47,17 @@ public final class ExtentReportUtil {
 
 	public static void createTest(String testname) {
 		ExtentManager.setExtentTest(extent.createTest(testname));
+	}
+	
+	public static void addAuthors(String[] authors) {
+		for(String author : authors) {
+			ExtentManager.getExtentTest().assignAuthor(author);
+		}
+	}
+	
+	public static void addCategories(CategoryType[] categories) {
+		for(CategoryType category : categories) {
+			ExtentManager.getExtentTest().assignCategory(category.toString());
+		}
 	}
 }

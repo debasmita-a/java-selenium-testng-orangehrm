@@ -5,6 +5,7 @@ import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import orangeHRM.annotations.FrameworkAnnotation;
 import orangeHRM.reports.ExtentLogger;
 import orangeHRM.reports.ExtentReportUtil;
 
@@ -27,7 +28,10 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 		ExtentReportUtil.createTest(result.getMethod().getDescription());
-
+		ExtentReportUtil.addAuthors(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class)
+		.author());
+		ExtentReportUtil.addCategories(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class)
+				.category());
 	}
 
 	@Override

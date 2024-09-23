@@ -5,9 +5,7 @@
     <classes>
       <class name="orangeHRM.testcases.LoginPageTest">
         <methods>
-          <include name="doLoginTest" invocation-numbers="1 0 3 2"/>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
+          <include name="doLoginTest" invocation-numbers="1 0"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>

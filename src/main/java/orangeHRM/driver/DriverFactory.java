@@ -13,9 +13,7 @@ import orangeHRM.utilities.ReadPropertyFile;
 
 public final class DriverFactory {
 
-	private DriverFactory() {
-
-	}
+	private DriverFactory() {}
 
 	public static void initDriver(String browser) throws Exception {
 

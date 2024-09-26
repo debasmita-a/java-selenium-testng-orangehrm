@@ -47,7 +47,7 @@ public final class FrameworkConstants {
 		return EXPLICITWAIT;
 	}
 
-	public static String getExtentreportpath() throws Exception {
+	public static String getExtentreportpath(){
 		if (ReadPropertyFile.get(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("yes")) {
 			return EXTENTREPORTPATH + "/" + System.currentTimeMillis() + "index.html";
 		} else {

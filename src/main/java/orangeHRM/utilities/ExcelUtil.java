@@ -13,6 +13,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import orangeHRM.constants.FrameworkConstants;
+import orangeHRM.exceptions.FrameworkException;
+import orangeHRM.exceptions.InvalidPathForExcelException;
 
 public final class ExcelUtil {
 
@@ -44,9 +46,11 @@ public final class ExcelUtil {
 				list.add(map);
 			}
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			throw new InvalidPathForExcelException("Excel path is invalid");
+			
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new FrameworkException("Excel path is invalid");
+		
 		}
 		return list;
 	}

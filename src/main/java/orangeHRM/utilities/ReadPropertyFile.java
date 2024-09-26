@@ -9,6 +9,7 @@ import java.util.Properties;
 
 import orangeHRM.constants.FrameworkConstants;
 import orangeHRM.enums.ConfigProperties;
+import orangeHRM.exceptions.PropertyFileUsageException;
 
 public final class ReadPropertyFile {
 
@@ -35,9 +36,9 @@ public final class ReadPropertyFile {
 		}
 	}
 	
-	public static String get(ConfigProperties key) throws Exception{
+	public static String get(ConfigProperties key){
 		if(Objects.isNull(key) || Objects.isNull(property.get(key.name().toLowerCase()))) {
-			throw new Exception("Property name " + key + " not found. Please check config.properties file");
+			throw new PropertyFileUsageException("Property name " + key + " not found. Please check config.properties file");
 		}
 		return CONFIG_MAP.get(key.name().toLowerCase());
 	}

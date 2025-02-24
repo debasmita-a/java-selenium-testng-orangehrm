@@ -11,6 +11,10 @@ node_modules/
 /bin/
 .settings/
 
+/test-output/
+/extent-test-output/
+*.classpath
+
 # Executables
 *.swf
 *.air

@@ -1,9 +1,9 @@
-package config;
+package converters;
 
 import java.lang.reflect.Method;
 import java.util.Map;
-
 import org.aeonbits.owner.Converter;
+import enums.BrowserType;
 
 public class StringToBrowserType implements Converter<BrowserType>{
 

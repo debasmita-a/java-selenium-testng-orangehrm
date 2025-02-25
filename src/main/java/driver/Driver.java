@@ -5,10 +5,8 @@ import config.ConfigFactory;
 
 public class Driver {
 
-    static WebDriver driver = null;
-
     public static void initDriver() { //LocalDriverFactory
-        
+        WebDriver driver = LocalDriverFactory.getDriver(ConfigFactory.getConfig().browser());
         driver.get(ConfigFactory.getConfig().url());
     }
 

@@ -3,6 +3,8 @@ package config;
 import org.aeonbits.owner.Config;
 
 import converters.StringToBrowserType;
+import converters.StringToRemoteModeType;
+import converters.StringToRunModeType;
 import enums.BrowserType;
 import enums.RemoteModeType;
 import enums.RunModeType;
@@ -15,10 +17,17 @@ public interface FrameworkConfig extends Config{
 	@DefaultValue("CHROME")
 	@ConverterClass(StringToBrowserType.class)
 	BrowserType browser();
+	
 	String url();
+
 	@Key("runmode")
+	@ConverterClass(StringToRunModeType.class)
 	RunModeType runmode();
+
+	@ConverterClass(StringToRemoteModeType.class)
 	@Key("remotemode")
 	RemoteModeType remotemode();
+
+	String seleniumGridURL();
 	
 }

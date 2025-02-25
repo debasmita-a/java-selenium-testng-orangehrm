@@ -1,4 +1,4 @@
-package driver;
+package driver.manager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;

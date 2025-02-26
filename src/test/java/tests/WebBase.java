@@ -2,10 +2,12 @@ package tests;
 
 import org.testng.annotations.BeforeMethod;
 
-public class WebBase {
-    
-    @BeforeMethod
-    public void setup(){
+import driver.manager.local.Driver;
 
+public class WebBase {
+
+    @BeforeMethod
+    public void setup() {
+        Driver.initDriver();
     }
 }

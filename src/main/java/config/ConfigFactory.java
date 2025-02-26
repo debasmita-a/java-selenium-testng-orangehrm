@@ -10,4 +10,8 @@ public final class ConfigFactory {
 		return ConfigCache.getOrCreate(FrameworkConfig.class);
 	}
 
+	public static BrowserStackConfig getBrowserStackConfig(){
+		return ConfigCache.getOrCreate(BrowserStackConfig.class);
+	}
+
 }

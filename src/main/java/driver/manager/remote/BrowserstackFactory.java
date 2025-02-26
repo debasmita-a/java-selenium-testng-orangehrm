@@ -1,9 +1,7 @@
-package driver;
+package driver.manager.remote;
 
 import org.openqa.selenium.WebDriver;
 
-import driver.manager.BrowserstackChromeManager;
-import driver.manager.BrowserstackEdgeManager;
 import enums.BrowserType;
 
 public final class BrowserstackFactory {

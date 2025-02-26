@@ -1,9 +1,7 @@
-package driver;
+package driver.manager.remote;
 
 import org.openqa.selenium.WebDriver;
 
-import driver.manager.SeleniumGridChromeManager;
-import driver.manager.SeleniumGridEdgeManager;
 import enums.BrowserType;
 
 public final class SeleniumGridFactory {

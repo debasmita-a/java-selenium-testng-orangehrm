@@ -29,5 +29,7 @@ public interface FrameworkConfig extends Config{
 	RemoteModeType remotemode();
 
 	String seleniumGridURL();
+
+	String selenoidURL();
 	
 }

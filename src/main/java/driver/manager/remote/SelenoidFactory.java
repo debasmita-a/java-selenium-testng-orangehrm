@@ -1,9 +1,7 @@
-package driver;
+package driver.manager.remote;
 
 import org.openqa.selenium.WebDriver;
 
-import driver.manager.SelenoidChromeManager;
-import driver.manager.SelenoidEdgeManager;
 import enums.BrowserType;
 
 public final class SelenoidFactory {

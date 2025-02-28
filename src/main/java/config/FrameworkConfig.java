@@ -10,14 +10,19 @@ import enums.RemoteModeType;
 import enums.RunModeType;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
-@Config.Sources ({"file:${user.dir}/src/test/resources/config.properties"})
+@Config.Sources ({"file:${user.dir}/src/test/resources/dev-config.properties",
+                 "file:${user.dir}/src/test/resources/staging-config.properties"})
 
 public interface FrameworkConfig extends Config{
+
+	@DefaultValue("dev")
+	String env();
 
 	@DefaultValue("CHROME")
 	@ConverterClass(StringToBrowserType.class)
 	BrowserType browser();
 	
+	@Key("${env}.url")
 	String url();
 
 	@Key("runmode")

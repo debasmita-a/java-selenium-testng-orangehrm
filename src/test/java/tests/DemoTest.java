@@ -2,12 +2,13 @@ package tests;
 
 import org.testng.annotations.Test;
 
-public class DemoTest {
+import pages.LoginPage;
+
+public class DemoTest extends WebBase{
 	
-	@Test
-	public void launchBrowser() {
-		 //
+	@Test(description = "User logs in with Username and Password")
+	public void userLogin() {
+		new LoginPage().LoginToApplication("Admin", "admin123");
 	}
 	
-
 }

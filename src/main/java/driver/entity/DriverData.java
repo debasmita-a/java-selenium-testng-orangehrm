@@ -2,16 +2,13 @@ package driver.entity;
 
 import enums.BrowserType;
 import enums.RemoteModeType;
-import enums.RunModeType;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@Builder
+@AllArgsConstructor
 @Getter
 public class DriverData {
 
     private BrowserType browserType;
     private RemoteModeType remoteModeType;
-    private RunModeType runModeType;
-    
 }

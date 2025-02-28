@@ -1,21 +1,29 @@
 package driver;
 
-import org.openqa.selenium.WebDriver;
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.function.Supplier;
 
+import org.openqa.selenium.WebDriver;
 import driver.entity.DriverData;
-import driver.manager.local.LocalDriverFactory;
-import driver.manager.remote.RemoteDriverFactory;
 import enums.RunModeType;
 
 public final class DriverFactory {
 
-    private DriverFactory(){}
+    private DriverFactory() {
+    }
 
-    public static WebDriver getDriver(DriverData driverData){
-        if(driverData.getRunModeType() == RunModeType.LOCAL){
-            return LocalDriverFactory.getDriver(driverData.getBrowserType());
-        }else {
-            return RemoteDriverFactory.getDriver(driverData.getRemoteModeType(), driverData.getBrowserType());
-        }
+    private static final Map<RunModeType, Supplier<IDriver>> DRIVER = new EnumMap<>(RunModeType.class);
+
+    static {
+        DRIVER.put(RunModeType.LOCAL, LocalDriverImpl::new);
+        DRIVER.put(RunModeType.REMOTE, RemoteDriverImpl::new);
+    }
+
+    public static IDriver getDriver(RunModeType runModeType) {
+        return DRIVER.get(runModeType).get();
+      /*   return driverData.getRunModeType() == RunModeType.LOCAL
+                ? new LocalDriverImpl().getDriver(driverData)
+                : new RemoteDriverImpl().getDriver(driverData); */
     }
 }

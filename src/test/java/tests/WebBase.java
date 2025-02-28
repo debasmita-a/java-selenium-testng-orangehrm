@@ -1,13 +1,19 @@
 package tests;
 
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-import driver.manager.local.Driver;
+import driver.Driver;
 
 public class WebBase {
 
-    @BeforeMethod
+    @BeforeTest
     public void setup() {
-        Driver.initDriver();
+       Driver.initDriver();	
+    }
+
+    @Test
+    public void demoTest(){
+        System.out.println("debugging before test.");
     }
 }

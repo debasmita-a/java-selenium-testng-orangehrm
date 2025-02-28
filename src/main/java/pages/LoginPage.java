@@ -25,8 +25,8 @@ public class LoginPage {
         return new HomePage();
     }
 
-    public void LoginToApplication(String username, String password){
-        setUserNameTextBox(username).setPasswordTextBox(password).clickLoginBtn();
+    public HomePage LoginToApplication(String username, String password){
+        return setUserNameTextBox(username).setPasswordTextBox(password).clickLoginBtn();
     }
 
 }

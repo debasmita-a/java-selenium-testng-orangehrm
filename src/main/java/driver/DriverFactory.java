@@ -4,8 +4,6 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import org.openqa.selenium.WebDriver;
-import driver.entity.DriverData;
 import enums.RunModeType;
 
 public final class DriverFactory {

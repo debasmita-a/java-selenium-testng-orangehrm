@@ -15,4 +15,5 @@ public class PageActionUtil {
     public static void waitAndSend(By by, String data){
         DriverManager.getDriver().findElement(by).sendKeys(data);
     }
+    
 }

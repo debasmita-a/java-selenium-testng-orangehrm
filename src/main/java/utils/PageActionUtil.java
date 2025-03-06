@@ -1,6 +1,9 @@
 package utils;
 
+import java.util.function.Consumer;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 
 import driver.manager.DriverManager;
 
@@ -14,6 +17,10 @@ public class PageActionUtil {
 
     public static void waitAndSend(By by, String data){
         DriverManager.getDriver().findElement(by).sendKeys(data);
+    }
+
+    public static void select(By by, Consumer<Select> consumer){
+        consumer.accept(new Select(DriverManager.getDriver().findElement(by)));
     }
     
 }

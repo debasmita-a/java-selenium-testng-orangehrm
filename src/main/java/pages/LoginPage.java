@@ -24,7 +24,7 @@ public class LoginPage {
         waitAndClick(LOGIN_BUTTON);
         return new HomePage();
     }
-
+//FIXME : NullPointerException
     public HomePage LoginToApplication(String username, String password){
         return setUserNameTextBox(username).setPasswordTextBox(password).clickLoginBtn();
     }

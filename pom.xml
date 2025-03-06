@@ -106,6 +106,15 @@
 			<version>2.23.1</version>
 		</dependency>
 
+	<!-- https://mvnrepository.com/artifact/io.github.sskorol/test-data-supplier -->
+<dependency>
+    <groupId>io.github.sskorol</groupId>
+    <artifactId>test-data-supplier</artifactId>
+    <version>2.3.0</version>
+</dependency>
+
+
+
 	</dependencies>
 
 	<build>

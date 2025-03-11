@@ -1,10 +1,10 @@
 package driver;
 
-import org.openqa.selenium.WebDriver;
-import static config.ConfigFactory.*;
-
 import java.util.Objects;
 
+import org.openqa.selenium.WebDriver;
+
+import static config.ConfigFactory.getConfig;
 import driver.entity.DriverData;
 import driver.manager.DriverManager;
 

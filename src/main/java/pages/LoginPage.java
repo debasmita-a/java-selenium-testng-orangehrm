@@ -2,13 +2,14 @@ package pages;
 
 import org.openqa.selenium.By;
 
-import static utils.PageActionUtil.*;
+import static utils.PageActionUtil.waitAndClick;
+import static utils.PageActionUtil.waitAndSend;
 
 public class LoginPage {
 
-    private static By USER_NAME_TEXTBOX = By.name("username");
-    private static By PASSWORD_TEXTBOX = By.name("password");
-    private static By LOGIN_BUTTON = By.xpath("//button[@type='submit']");
+    private static final By USER_NAME_TEXTBOX = By.name("username");
+    private static final By PASSWORD_TEXTBOX = By.name("password");
+    private static final By LOGIN_BUTTON = By.xpath("//button[@type='submit']");
 
     private LoginPage setUserNameTextBox(String username) {
         waitAndSend(USER_NAME_TEXTBOX, username);
@@ -24,8 +25,8 @@ public class LoginPage {
         waitAndClick(LOGIN_BUTTON);
         return new HomePage();
     }
-//FIXME : NullPointerException
-    public HomePage LoginToApplication(String username, String password){
+
+    public HomePage loginToApplication(String username, String password){
         return setUserNameTextBox(username).setPasswordTextBox(password).clickLoginBtn();
     }
 

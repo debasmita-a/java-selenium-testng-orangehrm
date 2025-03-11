@@ -16,7 +16,7 @@ import pages.entity.UserData;
 public class AddUserTest extends WebBase{
 
     @BeforeSuite
-    public void setup(){
+    public void setupUserFixture(){
         FixtureFactoryLoader.loadTemplates("pages.templates");
     }
 
@@ -39,7 +39,7 @@ public class AddUserTest extends WebBase{
 
     @Test(dataProvider = "getData1")
     public void addUserTest(UserData userData){
-        new LoginPage().LoginToApplication("Admin", "admin123")
+        new LoginPage().loginToApplication("Admin", "admin123")
         .navigateToAddUsersPage()
         .getAddUsersComponent()
         .clickAddUserBtn()

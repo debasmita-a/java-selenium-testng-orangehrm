@@ -1,9 +1,12 @@
 package utils;
 
+import java.time.Duration;
 import java.util.function.Consumer;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driver.manager.DriverManager;
 
@@ -12,11 +15,13 @@ public class PageActionUtil {
     private PageActionUtil(){}
 
     public static void waitAndClick(By by){
-        DriverManager.getDriver().findElement(by).click();
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
     }
 
     public static void waitAndSend(By by, String data){
-        DriverManager.getDriver().findElement(by).sendKeys(data);
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by)).sendKeys(data);
     }
 
     public static void select(By by, Consumer<Select> consumer){

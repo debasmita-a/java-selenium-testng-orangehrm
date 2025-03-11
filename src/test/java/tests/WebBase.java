@@ -14,6 +14,6 @@ public class WebBase {
 
     @AfterMethod
     public void teardown(){
-        Driver.quitDriver();
+      //  Driver.quitDriver();
     }
 }

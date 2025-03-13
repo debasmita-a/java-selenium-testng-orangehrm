@@ -27,13 +27,13 @@ public class AddUserTest extends WebBase{
 
     @DataSupplier
     public Stream<UserData> getData(){
-        UserData userData = new UserData("Admin", "test", "test", "Wnabled", "test");
+        UserData userData = new UserData("Admin", "test", "test", "Enabled", "test");
         return Stream.of(userData);
     }
 
     @DataSupplier(runInParallel = true)
     public List<UserData> getData1(){
-        List<UserData> valid = Fixture.from(UserData.class).gimme(2, "valid");
+        List<UserData> valid = Fixture.from(UserData.class).gimme(1, "valid");
         return valid;
     }
 

@@ -3,6 +3,7 @@ package tests;
 import java.util.List;
 import java.util.stream.Stream;
 
+import org.assertj.core.api.Assertions;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -10,10 +11,18 @@ import org.testng.annotations.Test;
 import br.com.six2six.fixturefactory.Fixture;
 import br.com.six2six.fixturefactory.loader.FixtureFactoryLoader;
 import io.github.sskorol.core.DataSupplier;
+import io.reactivex.rxjava3.functions.BiPredicate;
 import pages.LoginPage;
+import pages.components.AddUsersComponent;
 import pages.entity.UserData;
 
 public class AddUserTest extends WebBase{
+
+    BiPredicate<UserData, AddUsersComponent> justEmployeeNamePredicate = (userData, addUserComponent)->{
+        addUserComponent.enterEmployeeName(userData.getEmployeeName());
+        return false;
+        
+    };
 
     @BeforeSuite
     public void setupUserFixture(){
@@ -39,11 +48,16 @@ public class AddUserTest extends WebBase{
 
     @Test(dataProvider = "getData1")
     public void addUserTest(UserData userData){
-        new LoginPage().loginToApplication("Admin", "admin123")
+        boolean isSuccessMesgDisplayed = new LoginPage().loginToApplication("Admin", "admin123")
         .navigateToAddUsersPage()
         .getAddUsersComponent()
         .clickAddUserBtn()
-        .fillDetails(userData);
+        .fillDetails(userData)
+        .isSuccessMessageDisplayed();
+
+        Assertions.assertThat(isSuccessMesgDisplayed)
+                  .withFailMessage(()->"Success message in the field is nto displayed")
+                  .isTrue();
      
     }
 }

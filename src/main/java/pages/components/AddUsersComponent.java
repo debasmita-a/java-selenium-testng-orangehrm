@@ -56,12 +56,14 @@ public class AddUsersComponent {
         return true;
     }
 
-    public void fillDetails(UserData userData){
+    public AddUsersComponent fillDetails(UserData userData){
         selectUserRole(userData.getUserRole())
         .enterEmployeeName(userData.getEmployeeName())
         .selectStatus(userData.getStatus())
         .enterUserName(userData.getUserName())
         .enterPassword(userData.getPassword())
         .confirmPassword(userData.getPassword());
+        
+        return this;
     }
 }

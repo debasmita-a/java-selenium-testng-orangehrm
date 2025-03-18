@@ -15,8 +15,8 @@ public class PageActionUtil {
     private PageActionUtil(){}
 
     public static void waitAndClick(By by){
-        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(by)).click();
     }
 
     public static void waitAndSend(By by, String data){
@@ -24,8 +24,17 @@ public class PageActionUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(by)).sendKeys(data);
     }
 
+    public static void waitAndSelect(By by){
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
+    }
+
     public static void select(By by, Consumer<Select> consumer){
         consumer.accept(new Select(DriverManager.getDriver().findElement(by)));
+    }
+
+    public static String getElementText(By by){
+        return DriverManager.getDriver().findElement(by).getText();
     }
     
 }

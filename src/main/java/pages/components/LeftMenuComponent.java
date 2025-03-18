@@ -9,7 +9,7 @@ import utils.PageActionUtil;
 public class LeftMenuComponent {
 
     private static final String MENU = "//span[text()='%s']";
-    private static final String SUB_MENU = "//span[text()='%s']";
+    private static final String SUB_MENU = "//a[text()='%s ']";
 
     public LeftMenuComponent clickMenuItem(MenuType menuName){
         String xpath = String.format(MENU, menuName.getName());
@@ -17,8 +17,8 @@ public class LeftMenuComponent {
         return this;
     }
 
-    public LeftMenuComponent clickSubMenuItem(SubMenuType subMenuName){
-        String xpath = String.format(SUB_MENU, subMenuName.getName());
+    public LeftMenuComponent clickSubMenuItem(SubMenuType users){
+        String xpath = String.format(SUB_MENU, users.getName());
         PageActionUtil.waitAndClick(By.xpath(xpath));
         return this;
     }

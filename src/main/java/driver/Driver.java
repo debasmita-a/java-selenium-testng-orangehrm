@@ -21,6 +21,7 @@ public class Driver {
                     .getDriver(getConfig().runmode())
                     .getDriver(driverData);
             DriverManager.setDriver(driver);
+            DriverManager.getDriver().manage().window().maximize();
             DriverManager.getDriver().get(getConfig().url());
         }
     }

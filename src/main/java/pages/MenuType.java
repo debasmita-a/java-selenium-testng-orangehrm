@@ -5,7 +5,9 @@ public enum MenuType {
     ADMIN("Admin"),
     PIM("PIM"),
     LEAVE("Leave"),
-    TIME("Time");
+    TIME("Time"),
+    USER_MANAGEMENT("User Management");
+
 
     private final String name;
 

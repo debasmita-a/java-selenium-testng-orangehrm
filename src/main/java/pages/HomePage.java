@@ -1,6 +1,9 @@
 package pages;
 
+import org.openqa.selenium.By;
+
 import pages.components.LeftMenuComponent;
+import utils.PageActionUtil;
 
 public class HomePage {
 
@@ -15,9 +18,9 @@ public class HomePage {
     }
 
     public UsersPage navigateToAddUsersPage(){
-        leftMenuComponent.clickMenuItem(MenuType.ADMIN)
-        .clickSubMenuItem(SubMenuType.USERS);
-
+        PageActionUtil.waitAndClick(By.xpath("//span[text()='Admin']"));
+        PageActionUtil.waitAndClick(By.xpath("//span[text()='User Management ']"));
+        PageActionUtil.waitAndClick(By.xpath("//a[text()='Users']"));
         return new UsersPage();
     }
 

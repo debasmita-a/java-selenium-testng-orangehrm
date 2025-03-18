@@ -20,7 +20,7 @@ public class AddUserTest extends WebBase{
 
     BiPredicate<UserData, AddUsersComponent> justEmployeeNamePredicate = (userData, addUserComponent)->{
         addUserComponent.enterEmployeeName(userData.getEmployeeName());
-        return false;
+        return addUserComponent.getErrorMessage();
         
     };
 
